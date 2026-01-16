@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${Empleadinho}">Pagina Spring Boot</title>
+</head>
+<body>
+   <h1>Información de Empleadinho</h1>
+    <ul>
+        <li><strong>Nombre:</strong> <span th:text="${Empleadinho.nombre}"></span></li>
+        <li><strong>Apellido:</strong> <span th:text="${Empleadinho.apellido}"></span></li>
+        <li><strong>Dirección:</strong> <span th:text="${Empleadinho.direciones}"></span></li>
+        <li><strong>Puesto:</strong> <span th:text="${Empleadinho.puesto}"></span></li>
+        <li><strong>Edad:</strong> <span th:text="${Empleadinho.edad}"></span></li>
+        <li><strong>Teléfono:</strong> <span th:text="${Empleadinho.numero}"></span></li>
+        <li><strong>ID:</strong> <span th:text="${Empleadinho.id}"></span></li>
+    </ul>
+    <h2 th:text="${Informacion}"></h2>
+</body>
+</html>
