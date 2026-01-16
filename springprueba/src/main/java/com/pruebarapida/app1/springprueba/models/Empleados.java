@@ -1,10 +1,10 @@
 package com.pruebarapida.app1.springprueba.models;
 
 public class Empleados {
-    private String Nombre, apellido, direciones, puesto;
+    private String nombre, apellido, direciones, puesto;
     private Integer edad,numero,id;
-    public Empleados (String Nombre,String apellido, String direciones, String puesto,Integer edad, Integer numero, Integer id){
-        this.Nombre=Nombre;
+    public Empleados (String nombre,String apellido, String direciones, String puesto,Integer edad, Integer numero, Integer id){
+        this.nombre=nombre;
         this.apellido=apellido;
         this.direciones=direciones;
         this.edad=edad;
@@ -14,10 +14,10 @@ public class Empleados {
 
     }
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
     public String getApellido() {
         return apellido;
@@ -55,5 +55,4 @@ public class Empleados {
     public void setId(Integer id) {
         this.id = id;
     }
-
 }

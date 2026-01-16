@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${Empleadinho}">Pagina Spring Boot</title>
 </head>
-<body>
+<body> 
    <h1>Información de Empleadinho</h1>
     <ul>
         <li><strong>Nombre:</strong> <span th:text="${Empleadinho.nombre}"></span></li>
@@ -17,5 +17,31 @@
         <li><strong>ID:</strong> <span th:text="${Empleadinho.id}"></span></li>
     </ul>
     <h2 th:text="${Informacion}"></h2>
+    <h1>Lista de Empleadinhos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>Puesto</th>
+                <th>Edad</th>
+                <th>Teléfono</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="Empleadinho : ${Empleadinho1}">
+                <td th:text="${Empleadinho.nombre}"></td>
+                <td th:text="${Empleadinho.apellido}"></td>
+                <td th:text="${Empleadinho.direciones}"></td>
+                <td th:text="${Empleadinho.puesto}"></td>
+                <td th:text="${Empleadinho.edad}"></td>
+                <td th:text="${Empleadinho.numero}"></td>
+                <td th:text="${Empleadinho.id}"></td>
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 </html>

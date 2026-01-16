@@ -1,10 +1,7 @@
 package com.pruebantrapida.app1.springprueba.controllers;
-import java.util.HashMap;
-import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.pruebarapida.app1.springprueba.models.Empleados;
+import com.pruebarapida.app1.springprueba.models.DTO.ClaseDto;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,13 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/Api")
 public class EjemploRestController {
     @GetMapping("/detalles_infoRest")
-    public Map<String, Object> info(){
-    Empleados Empleado1 = new Empleados("Gabriel", "Riart", "11 de septiembre", "Pasante", 21, 4444, 1);
-    Map< String, Object> respuesta = new HashMap<>();
-    respuesta.put("Empleado", Empleado1);
-    respuesta.put("Informacion", "Es un bobazo");   
-   
-    return respuesta;
+    public ClaseDto info(){
+        ClaseDto Usuario = new ClaseDto();
+        Usuario.setTitulo("Bobazo");
+        Usuario.setUsuario("GABRIEL");
+    return Usuario ;
         }
     @GetMapping("/TaradoRest")
     public String Tarado(){
