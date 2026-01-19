@@ -1,17 +1,16 @@
 package com.pruebantrapida.app1.springprueba.controllers;
 
 public class ParametroDto {
-    private String manolo;
+    private String Informacion;
 
-    public String getManolo() {
-        return manolo;
+    public String getInformacion() {
+        return Informacion;
     }
 
-    public void setManolo(String manolo) {
-        this.manolo = manolo;
+    public void setInformacion(String informacion) {
+        Informacion = informacion;
     }
 
-    
 
 
     }

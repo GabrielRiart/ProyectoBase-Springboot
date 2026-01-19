@@ -16,10 +16,13 @@ public class RequestParamController {
     @GetMapping("/detalle")
     public ParametroDto detalle(@RequestParam(required = false, defaultValue = "SOS TERRIBLE TROL") String manolo) {
         ParametroDto parametro1 = new ParametroDto();
-        parametro1.setManolo(manolo);
+        parametro1.setInformacion(manolo);
+        //No se puede devolver mas de un objeto en un request param almenos asi no 
+        ParametroDto parametro2 = new ParametroDto();
+        parametro2.setInformacion("OTRO VALOR");
         return parametro1;
     }
-    @GetMapping("/Nosepuede")
+    @GetMapping("/Nosepuede")//Queria ver si se podia visualizar mas de un objeto con el requestparam pero nope
     public ClaseDto info(){
         ClaseDto Usuario = new ClaseDto();
         Usuario.setTitulo("Bobazo");
