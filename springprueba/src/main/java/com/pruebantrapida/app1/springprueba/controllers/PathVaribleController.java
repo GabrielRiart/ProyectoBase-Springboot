@@ -3,7 +3,7 @@ package com.pruebantrapida.app1.springprueba.controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pruebarapida.app1.springprueba.models.Empleados;
+import com.pruebarapida.app1.springprueba.models.DTO.Empleados;
 
 import java.util.Arrays;
 import java.util.HashMap;

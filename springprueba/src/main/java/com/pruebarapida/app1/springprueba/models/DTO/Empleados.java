@@ -1,4 +1,4 @@
-package com.pruebarapida.app1.springprueba.models;
+package com.pruebarapida.app1.springprueba.models.DTO;
 
 public class Empleados {
     private String nombre, apellido, direciones, puesto;

@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import com.pruebarapida.app1.springprueba.models.Empleados;
+import com.pruebarapida.app1.springprueba.models.DTO.Empleados;
 
 
 
