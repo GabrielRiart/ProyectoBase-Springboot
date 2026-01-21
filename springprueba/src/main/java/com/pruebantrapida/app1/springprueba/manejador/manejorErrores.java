@@ -13,4 +13,9 @@ public class manejorErrores {
     public ResponseEntity<String> handleAritmeticException(ArithmeticException Error) {
         return new ResponseEntity<>("Error: Division por cero no permitida", HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<String> handNullPointerException(NullPointerException Error) {
+        return new ResponseEntity<>("Error: No esta permitido con un null", HttpStatus.BAD_REQUEST);
+    }
+
 }
