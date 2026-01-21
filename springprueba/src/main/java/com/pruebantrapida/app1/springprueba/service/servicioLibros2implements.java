@@ -1,7 +1,9 @@
 package com.pruebantrapida.app1.springprueba.service;
 
 import com.pruebantrapida.app1.springprueba.repolib.repoLibro2interface;
+import com.pruebantrapida.app1.springprueba.util.ValidacionBroli;
 import com.pruebarapida.app1.springprueba.models.DTO.Libros2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,9 @@ import java.util.Optional;
 @Service
 public class servicioLibros2implements implements servicioLibros2interface {
     private final repoLibro2interface i_Repo;
+    @Autowired
+    private ValidacionBroli validacion;
+
     public servicioLibros2implements(repoLibro2interface i_Repo){
         this.i_Repo=i_Repo;
     }
@@ -27,6 +32,7 @@ public class servicioLibros2implements implements servicioLibros2interface {
 
     @Override
     public Libros2 guardar(Libros2 libro) {
+        if (validacion.tituloValido(libro)){System.out.println("Sos un bobazo");};
         return i_Repo.save(libro);
     }
 
@@ -39,6 +45,7 @@ public class servicioLibros2implements implements servicioLibros2interface {
     public String buscarlibroPortitulo(String titulo) {
         boolean encontrado = i_Repo.findAll().stream()
                 .anyMatch(libros2 -> libros2.getTitulo() !=null && libros2.getTitulo().equalsIgnoreCase(titulo));
+
         return encontrado ? "Libro encontrado ": "Libro no encontrado";
     }
 
